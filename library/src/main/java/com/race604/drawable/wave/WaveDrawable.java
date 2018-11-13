@@ -237,11 +237,7 @@ public class WaveDrawable extends Drawable implements Animatable, ValueAnimator.
         }
 
         int sc = canvas.saveLayer(0, 0, mWidth, mHeight, null,
-                Canvas.MATRIX_SAVE_FLAG |
-                Canvas.CLIP_SAVE_FLAG |
-                Canvas.HAS_ALPHA_LAYER_SAVE_FLAG |
-                Canvas.FULL_COLOR_LAYER_SAVE_FLAG |
-                Canvas.CLIP_TO_LAYER_SAVE_FLAG);
+                Canvas.ALL_SAVE_FLAG);
 
         if (mWaveLevel > 0) {
             canvas.clipRect(0, mWaveLevel, mWidth, mHeight);
